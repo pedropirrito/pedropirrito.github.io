@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PedrosQuiz</title>
+  <script src="ruffle.js"></script>
+ <style>
+    body {
+      background-color: #003300; /* dark green */
+      color: #00FF00; /* neon green text */
+      font-family: Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <script src="path/to/ruffle.js"></script>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+<div id="flash-container"></div>
+<script>
+  window.addEventListener("load", () => {
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    document.getElementById("flash-container").appendChild(player);
+    player.load("PedrosQuiz.swf");
+  });
+</script>
+
+  
+
+  <div class="back-link"><a href="index.html">Back</a></div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
