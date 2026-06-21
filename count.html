@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>count.</title>
+  <style>
+    body {
+      background-color: black;
+      color: red;
+      font-family: Comic Sans;
+      text-align: center;
+      margin-top: 20%;
+    }
+    #stopwatch {
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Zw ozg vowddk af lzw kzwdlwj gx lzw Egkl Zayz oadd jwkl af lzw kzsvgo gx lzw Sdeayzlq.</h1>
+  <div id="stopwatch"></div>
+
+  <!-- ticking sound loops automatically -->
+  <audio id="tick" src="tick.mp3" autoplay loop></audio>
+
+  <script>
+    function updateStopwatch() {
+      // Data de referência: 8 de dezembro de 2013, meia-noite BRT
+      const startDate = new Date("2013-12-08T00:00:00-03:00");
+      const now = new Date();
+
+      // Diferença em milissegundos
+      const diff = now - startDate;
+
+      // Converter para dias, horas, minutos, segundos
+      const seconds = Math.floor(diff / 1000);
+      const days = Math.floor(seconds / (3600 * 24));
+      const hours = Math.floor((seconds % (3600 * 24)) / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+      const secs = seconds % 60;
+
+      document.getElementById("stopwatch").textContent =
+        `${days}d ${hours}h ${minutes}m ${secs}s`;
+    }
+
+    // Atualizar a cada segundo
+    setInterval(updateStopwatch, 1000);
+    updateStopwatch();
+  </script>
+</body>
+</html>
