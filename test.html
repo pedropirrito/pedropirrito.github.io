@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Popup</title>
+  <style>
+    /* Basic page setup */
+    body { font-family: Arial, sans-serif; }
+
+    /* Hidden by default */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    /* Modal content box */
+    .modal-content {
+      background: #222;
+      color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      width: 300px;
+      border-radius: 8px;
+    }
+
+    /* Show modal when targeted */
+    #login:target {
+      display: block;
+    }
+
+    input, button {
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Link to trigger popup -->
+  <a href="#login">Abrir Login</a>
+
+  <!-- Modal -->
+  <div id="login" class="modal">
+    <div class="modal-content">
+      <h2>Fazer login</h2>
+      <label>Nome de usuário</label>
+      <input type="text">
+      <label>Senha</label>
+      <input type="password">
+      <button>Fazer login</button>
+      <a href="#">Cancelar</a>
+    </div>
+  </div>
+</body>
+</html>
